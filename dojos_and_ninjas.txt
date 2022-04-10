@@ -1,0 +1,32 @@
+SELECT * FROM dojos_and_ninjas_schema.dojos;
+INSERT INTO dojos_and_ninjas_schema.dojos (name) VALUES ("Seattle Dojo");
+INSERT INTO dojos_and_ninjas_schema.dojos (name) VALUES ("Los Angeles Dojo");
+INSERT INTO dojos_and_ninjas_schema.dojos (name) VALUES ("New York Dojo");
+
+DELETE FROM dojos_and_ninjas_schema.dojos;
+
+SELECT * FROM dojos_and_ninjas_schema.dojos;
+INSERT INTO dojos_and_ninjas_schema.dojos (name) VALUES ("Chicago Dojo");
+INSERT INTO dojos_and_ninjas_schema.dojos (name) VALUES ("New Orleans Dojo");
+INSERT INTO dojos_and_ninjas_schema.dojos (name) VALUES ("Miami Dojo");
+
+SELECT * FROM dojos_and_ninjas_schema.ninjas;
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age) VALUES ("John", "Smith", "40");
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age) VALUES ("Jane", "Doe", "23");
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age) VALUES ("John", "Doe", "34");
+
+
+SELECT * FROM dojos_and_ninjas_schema.ninjas;
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age) VALUES ("Joe", "Doe", "35");
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age) VALUES ("Bob", "White", "28");
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age) VALUES ("Nick", "Jones", "54");
+
+SELECT * FROM dojos_and_ninjas_schema.ninjas;
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age) VALUES ("Dave", "Johnson", "23");
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age) VALUES ("Dan", "Wade", "25");
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age) VALUES ("Belle", "Dean", "27");
+
+SELECT * FROM dojos_and_ninjas_schema.dojos
+LEFT JOIN ninjas ON dojos.id = dojos.id
+WHERE dojos.id = 4;
+
